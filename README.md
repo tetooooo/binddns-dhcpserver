@@ -47,7 +47,7 @@ Zone dosyalarımı oluşturup düzenleme kısmına geçelim.\
 BURAYA <i>forwardzone1.png</i> ekle.\
 BURAYA <i>forwardzone2.png</i> ekle.\
 BURAYA <i>reversezone1.png</i> ekle.\
-BURAYA <i>reversezone2.png</i> ekle.\
+BURAYA <i>reversezone2.png</i> ekle.
 
 IN --> İnternet tanımı olduğunu gösterir.\
 TTL --> Time-to-Live (Yaşam Süresi).\
