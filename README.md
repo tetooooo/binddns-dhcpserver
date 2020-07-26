@@ -42,7 +42,7 @@ BURAYA <i>nameconf1.png</i> ekle.\
 BURAYA <i>nameconf2.png</i> ekle.
 
 Zone dosyalarının default olarak okunbilmesi için <i>/var/named</i> dosyası içinde yer alması lazım.\
-Zone dosyalarımı oluşturup düzenleme kısmına geçelim.\
+Zone dosyalarımı oluşturup düzenleme kısmına geçelim.
 
 BURAYA <i>forwardzone1.png</i> ekle.\
 BURAYA <i>forwardzone2.png</i> ekle.\
