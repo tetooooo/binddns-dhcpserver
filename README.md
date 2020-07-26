@@ -78,19 +78,19 @@ BURAYA <i>enablebind4.png</i> ekle.\
 $ nmcli connection down enp0s3; nmcli connection up enp0s3</b>\
 BURAYA <i>interfacereset.png</i> ekle.
 
-BURAYA <i>dig1.png</i> ekle.
-BURAYA <i>dig2.png</i> ekle.
+BURAYA <i>dig1.png</i> ekle.\
+BURAYA <i>dig2.png</i> ekle.\
 
 ### 3. DHCP Server Kurulumu ve Yapılandırması:
 ---
 $ <b>dnf -y install dhcp-server </b> --> DHCP Server kurulumunu yapıyoruz.\
 BURAYA <i>dhcpserverkurulumu.png</i> ekle.\
-$ <b>vim /etc/dhcp/dhcpd.conf</b> --> DHCP Server dosyamızın düzenlemesini yapmamız lazım.
-BURAYA <i>dhcp1.png</i>
+$ <b>vim /etc/dhcp/dhcpd.conf</b> --> DHCP Server dosyamızın düzenlemesini yapmamız lazım.\
+BURAYA <i>dhcp1.png</i>\
 BURAYA <i>dhcp2.png</i>
 
-$ <b>systemctl enable --now dhcpd</b> --> Sistemimize dhcp sunucumuzu aktif ediyoruz.
+$ <b>systemctl enable --now dhcpd</b> --> Sistemimize dhcp sunucumuzu aktif ediyoruz.\
 
 Arka planda Firewall çalışıyor ise:\
 <b>$ firewall-cmd --add-service=dhcp --permanent\ 
-$ firewall-cmd --reload</b>
+$ firewall-cmd --reload</b>\
