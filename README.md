@@ -75,6 +75,9 @@ BURAYA <i>enablebind4.png</i> ekle.\
 $ nmcli connection down enp0s3; nmcli connection up enp0s3</b>\
 BURAYA <i>interfacereset.png</i> ekle.
 
+### 3. DHCP Server Kurulumu ve Yapılandırması:
+---
+
 
 
 
