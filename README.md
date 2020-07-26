@@ -11,7 +11,7 @@
   <b><summary> Interface Dosyamızı Manual Yapılandırma: </summary></b>
   
   $ <b>ip a</b> komutunu kullanarak <b><i>Network Interface'lerimizi</i></b> görüntülüyoruz.\
-  BURAYA <i>ipacommend.png</i> ekle.\
+  ![](images/ipacommand.png.png)
   Ben Interface olarak <b><i>enp0s3</i></b> kullanıyorum. Şimdi <b><i>/etc/sysconfig/network-script/ifcfg-enp0s3</b></i> komutu ile Interface ayarlarımı düzenlicem.\
   BURAYA <i>interfaceayarlari.png</i> ekle.\
   İlk kurulumda <b><i>BOOTPROTO</b></i> default olarak dhcp geliyor. Biz onu none ile değiştiriyoruz. Ayrıca <b><i>IPADDR, PREFIX, GATEWAY, DNS1</b></i> değişkenlerimizi manual olarak eklememiz lazım.\
