@@ -66,10 +66,13 @@ Terminalden bind aktif etmemiz lazım.
 
 $ <b>systemctl enable --now named\
 BURAYA <i>enablebind1.png</i> ekle.\
+
+Arka planda Firewall çalışıyor ise:
 $ firewall-cmd --add-service=dns --permanent\
-BURAYA <i>enablebind2.png</i> ekle.\
+BURAYA <i>enablebind2.png</i> ekle.
 $ firewall-cmd --reload\
 BURAYA <i>enablebind3.png</i> ekle.\
+
 $ nmcli connection modify enp0s3 ipv4.dns 192.168.2.220\
 BURAYA <i>enablebind4.png</i> ekle.\
 $ nmcli connection down enp0s3; nmcli connection up enp0s3</b>\
@@ -77,17 +80,18 @@ BURAYA <i>interfacereset.png</i> ekle.
 
 ### 3. DHCP Server Kurulumu ve Yapılandırması:
 ---
+$ <b>dnf -y install dhcp-server </b> --> DHCP Server kurulumunu yapıyoruz.\
+BURAYA <i>dhcpserverkurulumu.png</i> ekle.\
+$ <b>vim /etc/dhcp/dhcpd.conf</b> --> DHCP Server dosyamızın düzenlemesini yapmamız lazım.
+BURAYA <i>dhcp1.png</i>
+BURAYA <i>dhcp2.png</i>
 
+$ <b>systemctl enable --now dhcpd</b> --> Sistemimize dhcp sunucumuzu aktif ediyoruz.
 
-
-
-
-
-
-
-
-
-
+Arka planda Firewall çalışıyor ise:
+<b>
+$ firewall-cmd --add-service=dhcp --permanent\ 
+$ firewall-cmd --reload</b>
 
 
 
