@@ -69,16 +69,16 @@ $ <b>systemctl enable --now named\
 
 Arka planda Firewall çalışıyor ise:
 $ firewall-cmd --add-service=dns --permanent\
-![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/enablebind2.png)
+![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/enablebind2.png)\
 $ firewall-cmd --reload\
-![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/enablebind3.png)
+![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/enablebind3.png)\
 
 $ nmcli connection modify enp0s3 ipv4.dns 192.168.2.220\
-![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/enablebind4.png)
+![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/enablebind4.png)\
 $ nmcli connection down enp0s3; nmcli connection up enp0s3</b>\
 ![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/interfacereset.png)
 
-![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/dig1.png)
+![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/dig1.png)\
 ![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/dig2.png)
 
 <b>dig</b> komutu sayesinde bize domaine bağlı olan kayıtları görebiliyoruz.
