@@ -18,7 +18,7 @@
   $ nmcli connection down enp0s3; nmcli connection up enp0s3 --> Bu komut yardımı ile interface yeniden başlat yapıyoruz.\
   $ ip a komutu ile tekrardan istediğimiz IP Adresine ayarladı mı diye kontrol ediyoruz.\
   
-</detais>
+</details>
 
 <details>
   
