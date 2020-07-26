@@ -8,7 +8,7 @@
 
 <details>
   
-  <b><summary> İnterface Dosyamızı Manual Yapılandırma: </summary>
+  <b><summary> Interface Dosyamızı Manual Yapılandırma: </summary>
   
   $ ip a komutunu kullanarak <i>Network Interface'lerimizi</i> görüntülüyoruz.\
   BURAYA <i>ipacommend.png</i> ekle.\
@@ -33,7 +33,7 @@
   $ sudo nmcli connection down enp1s0 && sudo nmcli connection up enp1s0 --> Komutu ile modem interface yeniden başlat yapıyoruz.\
   $ ip a komutu ile değişiklikler kaydedilmiş mi diye kontrol ediyoruz.
   
-</detais>
+</details>
 
 
 
