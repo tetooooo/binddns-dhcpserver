@@ -4,7 +4,7 @@
 İlk etapta Centos 8 Client'imize ***Static IP*** ataması ile başlayacağız. Ardından ***BIND DNS*** kurulumunu yaparak dosya ayarlamalarımızı yapacağız. En sonunda da ***DHCP Server*** kurulumunu yaparak bölümü bitirecez. Dosya düzeltmeleri için ben ***VIM EDITOR*** kullanmayı tercih ettim.
 
 
-## 1. Centos 8 Static IP Ataması:
+### 1. Centos 8 Static IP Ataması:
 
 <details>
   
@@ -35,7 +35,7 @@
   
 </details>
 
-## 2. BIND DNS Kurulumu ve Yapılandırması:
+### 2. BIND DNS Kurulumu ve Yapılandırması:
 
 $ dnf -y install bind bind-utils --> Bind paketlerimizi sisteme yüklüyoruz.\
 <b>BIND</b> default olarak <b>/etc/named.conf</b> dosyasını kullanıyor.\
