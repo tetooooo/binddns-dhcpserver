@@ -13,7 +13,7 @@
   $ <b>ip a</b> komutunu kullanarak <b><i>Network Interface'lerimizi</i></b> görüntülüyoruz.\
   ![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/ipacommand.png) \
   Ben Interface olarak <b><i>enp0s3</i></b> kullanıyorum. Şimdi <b><i>/etc/sysconfig/network-script/ifcfg-enp0s3</b></i> komutu ile Interface ayarlarımı düzenlicem.\
-  BURAYA <i>interfaceayarlari.png</i> ekle.\
+  ![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/interfaceayarlari.png)\
   İlk kurulumda <b><i>BOOTPROTO</b></i> default olarak dhcp geliyor. Biz onu none ile değiştiriyoruz. Ayrıca <b><i>IPADDR, PREFIX, GATEWAY, DNS1</b></i> değişkenlerimizi manual olarak eklememiz lazım.\
   $ <b>nmcli connection down enp0s3; nmcli connection up enp0s3</b> --> Bu komut yardımı ile interface yeniden başlat yapıyoruz.\
   $ <b>ip a</b> komutu ile tekrardan istediğimiz IP Adresine ayarladı mı diye kontrol ediyoruz.
@@ -24,11 +24,11 @@
   
   <b><summary> nmtui Komutu Yardımıyla Yapılandırma: </summary></b>
   $ <b>nmtui</b>\
-  BURAYA <i>nmtui1.png</i> ekle.\
+  ![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/nmtui1.png)\
   <b><i>Edit a connection</b></i> giriş yapalım.\
-  BURAYA <i>nmtui2.png</i> ekle.\
+  ![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/nmtui2.png)\
   Gelen pencerede <b><i>Edit</b></i> seçeneğini seçelim.\
-  BURAYA <i>nmtui3.png</i> ekle.\
+  ![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/nmtui3.png)\
   Ardından OK ile burdan çıkış yapalım.\
   $ <b><i>sudo nmcli connection down enp1s0 && sudo nmcli connection up enp1s0</b></i> --> Komutu ile modem interface yeniden başlat yapıyoruz.\
   $ <b>ip a</b> komutu ile değişiklikler kaydedilmiş mi diye kontrol ediyoruz.
@@ -40,8 +40,8 @@
 $ <b>dnf -y install bind bind-utils</b> --> Bind paketlerimizi sisteme yüklüyoruz.\
 <b><i>BIND</b></i> default olarak <b><i>/etc/named.conf</b></i> dosyasını kullanıyor.\
 $ <b><i>vim /etc/named.conf</b></i> --> Bind dosyasını düzenlicez.\
-BURAYA <i>nameconf1.png</i> ekle.\
-BURAYA <i>nameconf2.png</i> ekle.
+![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/namedconf1.png)\
+![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/nameconf2.png)\
 
 zone “.” tanımını değiştirmememiz gerekiyor. Eğer NS tanımlı serverımız eğer olur da çalışmaz ise zone “.” tanımlı alan adına başvuracak.
 
@@ -49,10 +49,10 @@ zone “.” tanımını değiştirmememiz gerekiyor. Eğer NS tanımlı server�
 
 example.com adlı alan adımızı 192.168.2.220 IP Adresinde açacağımızı düşünelim. <b>zone “2.168.192.in-addr.arpa”</b> tanımını sonundaki 8 byte'ı silersek 192.168.2 olarak kalıyor. Ve bu reverse zone tanımı olacağı için aklınızda tersten yazacağız diye aklınızda kalabilir 2.168.192 file dosyasının ismini dilediğiniz gibi yapabilirsiniz buradaki örnekte <b>“2.168.192.db”</b> olarak tanımlandığı için bu sadece bir örnek. İsterseniz “reverse.example.com” diye de tanımlayabilirdik.
 
-BURAYA <i>forwardzone1.png</i> ekle.\
-BURAYA <i>forwardzone2.png</i> ekle.\
-BURAYA <i>reversezone1.png</i> ekle.\
-BURAYA <i>reversezone2.png</i> ekle.
+![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/forwardzone1.png)\
+![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/forwardzone2.png)\
+![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/reversezone1.png)\
+![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/reversezone2.png)\
 
 <b>IN --> İnternet tanımı olduğunu gösterir.\
 TTL --> Time-to-Live (Yaşam Süresi).\
@@ -65,21 +65,21 @@ PTR --> Pointer, IP Adresinin hangi domaini temsil ettiğini temsil eder.</b>
 Terminalden bind aktif etmemiz lazım.
 
 $ <b>systemctl enable --now named\
-BURAYA <i>enablebind1.png</i> ekle.
+![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/enablebind1.png)
 
 Arka planda Firewall çalışıyor ise:
 $ firewall-cmd --add-service=dns --permanent\
-BURAYA <i>enablebind2.png</i> ekle.
+![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/enablebind2.png)
 $ firewall-cmd --reload\
-BURAYA <i>enablebind3.png</i> ekle.
+![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/enablebind3.png)
 
 $ nmcli connection modify enp0s3 ipv4.dns 192.168.2.220\
-BURAYA <i>enablebind4.png</i> ekle.\
+![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/enablebind4.png)
 $ nmcli connection down enp0s3; nmcli connection up enp0s3</b>\
-BURAYA <i>interfacereset.png</i> ekle.
+![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/interfacereset.png)
 
-BURAYA <i>dig1.png</i> ekle.\
-BURAYA <i>dig2.png</i> ekle.
+![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/dig1.png)
+![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/dig2.png)
 
 <b>dig</b> komutu sayesinde bize domaine bağlı olan kayıtları görebiliyoruz.
 
