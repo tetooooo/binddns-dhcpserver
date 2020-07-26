@@ -36,6 +36,7 @@
 </details>
 
 ## 2. Centos 8 Static IP Ataması:
+
 $ dnf -y install bind bind-utils  
 <b>BIND</b> default olarak <b>/etc/named.conf</b> dosyasını kullanıyor.
 $ vim /etc/named.conf
