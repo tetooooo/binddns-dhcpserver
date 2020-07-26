@@ -86,10 +86,10 @@ $ nmcli connection down enp0s3; nmcli connection up enp0s3</b>\
 ### 3. DHCP Server Kurulumu ve Yapılandırması:
 ---
 $ <b>dnf -y install dhcp-server </b> --> DHCP Server kurulumunu yapıyoruz.\
-BURAYA <i>dhcpserverkurulumu.png</i> ekle.\
+![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/dhcpserverkurulumu.png)\
 $ <b>vim /etc/dhcp/dhcpd.conf</b> --> DHCP Server dosyamızın düzenlemesini yapmamız lazım.\
-BURAYA <i>dhcp1.png</i>\
-BURAYA <i>dhcp2.png</i>
+![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/dhcp2.png)\
+![](https://github.com/tetooooo/binddns-dhcpserver/blob/master/images/dhcp3.png)
 
 $ <b>systemctl enable --now dhcpd</b> --> Sistemimize dhcp sunucumuzu aktif ediyoruz.
 
