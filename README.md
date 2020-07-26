@@ -91,7 +91,6 @@ BURAYA <i>dhcp2.png</i>
 
 $ <b>systemctl enable --now dhcpd</b> --> Sistemimize dhcp sunucumuzu aktif ediyoruz.
 
-Arka planda Firewall çalışıyor ise:
-<b>
-$ firewall-cmd --add-service=dhcp --permanent\ 
+Arka planda Firewall çalışıyor ise:\
+<b>$ firewall-cmd --add-service=dhcp --permanent\ 
 $ firewall-cmd --reload</b>
