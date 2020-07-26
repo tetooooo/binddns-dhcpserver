@@ -98,3 +98,9 @@ Arka planda Firewall çalışıyor ise:\
 $ firewall-cmd --reload</b>
 
 <b><i>NOT: </b></i>Modem arayüzünden DHCP kapalı tutmanız lazım.
+
+### Kaynakça
+
+https://www.server-world.info/en/note?os=CentOS_8&p=dhcp&f=1
+https://www.server-world.info/en/note?os=CentOS_8&p=dns&f=1
+http://www.ilkertemir.com/index.php?s=DNS+ve+BIND
