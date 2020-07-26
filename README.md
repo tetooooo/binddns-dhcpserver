@@ -35,13 +35,20 @@
   
 </details>
 
-## 2. Centos 8 Static IP Ataması: .\
+## 2. BIND DNS Kurulumu ve Yapılandırması:
 
 $ dnf -y install bind bind-utils --> Bind paketlerimizi sisteme yüklüyoruz.\
 <b>BIND</b> default olarak <b>/etc/named.conf</b> dosyasını kullanıyor.\
 $ vim /etc/named.conf --> Bind dosyasını düzenlicez.\
 BURAYA <i>nameconf1.png</i> ekle.\
 BURAYA <i>nameconf2.png</i> ekle.\
+
+Zone dosyalarının default olarak okunbilmesi için <i>/var/named</i> dosyası içinde yer alması lazım.
+
+
+
+
+
 
 
 
