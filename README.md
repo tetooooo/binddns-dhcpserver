@@ -10,13 +10,13 @@
   
   <b><summary> Interface Dosyamızı Manual Yapılandırma: </summary></b>
   
-  $ ip a komutunu kullanarak <i>Network Interface'lerimizi</i> görüntülüyoruz.\
+  $ <b>ip a</b> komutunu kullanarak <b><i>Network Interface'lerimizi</i></b> görüntülüyoruz.\
   BURAYA <i>ipacommend.png</i> ekle.\
-  Ben Interface olarak <i>enp0s3</i> kullanıyorum. Şimdi /etc/sysconfig/network-script/ifcfg-enp0s3 komutu ile Interface ayarlarımı düzenlicem.\
+  Ben Interface olarak <b><i>enp0s3</i></b> kullanıyorum. Şimdi <b><i>/etc/sysconfig/network-script/ifcfg-enp0s3</b></i> komutu ile Interface ayarlarımı düzenlicem.\
   BURAYA <i>interfaceayarlari.png</i> ekle.\
-  İlk kurulumda <i>BOOTPROTO</i> default olarak dhcp geliyor. Biz onu none ile değiştiriyoruz. Ayrıca <i>IPADDR, PREFIX, GATEWAY, DNS1</i> değişkenlerimizi manual olarak eklememiz lazım.\
-  $ nmcli connection down enp0s3; nmcli connection up enp0s3 --> Bu komut yardımı ile interface yeniden başlat yapıyoruz.\
-  $ ip a komutu ile tekrardan istediğimiz IP Adresine ayarladı mı diye kontrol ediyoruz.
+  İlk kurulumda <b><i>BOOTPROTO</b></i> default olarak dhcp geliyor. Biz onu none ile değiştiriyoruz. Ayrıca <b><i>IPADDR, PREFIX, GATEWAY, DNS1</b></i> değişkenlerimizi manual olarak eklememiz lazım.\
+  $ <b>nmcli connection down enp0s3; nmcli connection up enp0s3</b> --> Bu komut yardımı ile interface yeniden başlat yapıyoruz.\
+  $ <b>ip</b> a komutu ile tekrardan istediğimiz IP Adresine ayarladı mı diye kontrol ediyoruz.
   
 </details>
 
