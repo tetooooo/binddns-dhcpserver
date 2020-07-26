@@ -11,6 +11,7 @@
   <b><summary> İnterface Dosyamızı Manual Değiştirme: </summary>
   
   ip a komutunu kullanarak <i>Network Interface'lerimizi</i> görüntülüyoruz.
+  
   BURAYA <b>ipacommend.png</b> ekle.
   
   
