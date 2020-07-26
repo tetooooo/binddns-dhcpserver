@@ -65,13 +65,13 @@ PTR --> Pointer, IP Adresinin hangi domaini temsil ettiğini temsil eder.</b>
 Terminalden bind aktif etmemiz lazım.
 
 $ <b>systemctl enable --now named\
-BURAYA <i>enablebind1.png</i> ekle.\
+BURAYA <i>enablebind1.png</i> ekle.
 
 Arka planda Firewall çalışıyor ise:
 $ firewall-cmd --add-service=dns --permanent\
 BURAYA <i>enablebind2.png</i> ekle.
 $ firewall-cmd --reload\
-BURAYA <i>enablebind3.png</i> ekle.\
+BURAYA <i>enablebind3.png</i> ekle.
 
 $ nmcli connection modify enp0s3 ipv4.dns 192.168.2.220\
 BURAYA <i>enablebind4.png</i> ekle.\
@@ -79,7 +79,7 @@ $ nmcli connection down enp0s3; nmcli connection up enp0s3</b>\
 BURAYA <i>interfacereset.png</i> ekle.
 
 BURAYA <i>dig1.png</i> ekle.\
-BURAYA <i>dig2.png</i> ekle.\
+BURAYA <i>dig2.png</i> ekle.
 
 ### 3. DHCP Server Kurulumu ve Yapılandırması:
 ---
