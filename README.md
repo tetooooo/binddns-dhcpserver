@@ -8,15 +8,30 @@
 
 <details>
   
-  <b><summary> İnterface Dosyamızı Manual Değiştirme: </summary>
+  <b><summary> İnterface Dosyamızı Manual Yapılandırma: </summary>
   
-  -ip a komutunu kullanarak <i>Network Interface'lerimizi</i> görüntülüyoruz.\
+  $ ip a komutunu kullanarak <i>Network Interface'lerimizi</i> görüntülüyoruz.\
   BURAYA <i>ipacommend.png</i> ekle.\
   Ben Interface olarak <i>enp0s3</i> kullanıyorum. Şimdi /etc/sysconfig/network-script/ifcfg-enp0s3 komutu ile Interface ayarlarımı düzenlicem.\
-  BURAYA <i>interfaceayarlari</i> ekle.\
+  BURAYA <i>interfaceayarlari.png</i> ekle.\
   İlk kurulumda <i>BOOTPROTO</i> default olarak dhcp geliyor. Biz onu none ile değiştiriyoruz. Ayrıca <i>IPADDR, PREFIX, GATEWAY, DNS1</i> değişkenlerimizi manual olarak eklememiz lazım.\
-  -nmcli connection down enp0s3; nmcli connection up enp0s3 --> Bu komut yardımı ile interface yeniden başlat yapıyoruz.\
-  -ip a komutu ile tekrardan istediğimiz IP Adresine ayarladı mı diye kontrol ediyoruz.
+  $ nmcli connection down enp0s3; nmcli connection up enp0s3 --> Bu komut yardımı ile interface yeniden başlat yapıyoruz.\
+  $ ip a komutu ile tekrardan istediğimiz IP Adresine ayarladı mı diye kontrol ediyoruz.\
+  
+</detais>
+
+<details>
+  
+  <b><summary> nmtui Komutu Yardımıyla Yapılandırma: </summary>
+  - nmtui --> komutunu çalıştırıyoruz.\
+  BURAYA <i>nmtui1.png</i> ekle.\
+  Edit a connection giriş yapalım.\
+  BURAYA <i>nmtui2.png</i> ekle.\
+  Gelen pencerede <i>Edit</i> seçeneğini seçelim.
+  BURAYA <i>nmtui3.png</i> ekle.\
+  Ardından OK ile burdan çıkış yapalım
+  $ sudo nmcli connection down enp1s0 && sudo nmcli connection up enp1s0 --> Komutu ile modem interface yeniden başlat yapıyoruz.\
+  $ ip a komutu ile değişiklikler kaydedilmiş mi diye kontrol ediyoruz.
   
 </detais>
 
