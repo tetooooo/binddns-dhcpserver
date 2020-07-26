@@ -37,34 +37,34 @@
 
 ### 2. BIND DNS Kurulumu ve Yapılandırması:
 ---
-$ dnf -y install bind bind-utils --> Bind paketlerimizi sisteme yüklüyoruz.\
-<b>BIND</b> default olarak <b>/etc/named.conf</b> dosyasını kullanıyor.\
-$ vim /etc/named.conf --> Bind dosyasını düzenlicez.\
+$ <b>dnf -y install bind bind-utils</b> --> Bind paketlerimizi sisteme yüklüyoruz.\
+<b><i>BIND</b></i> default olarak <b><i>/etc/named.conf</b></i> dosyasını kullanıyor.\
+$ <b><i>vim /etc/named.conf</b></i> --> Bind dosyasını düzenlicez.\
 BURAYA <i>nameconf1.png</i> ekle.\
 BURAYA <i>nameconf2.png</i> ekle.
 
 zone “.” tanımını değiştirmememiz gerekiyor. Eğer NS tanımlı serverımız eğer olur da çalışmaz ise zone “.” tanımlı alan adına başvuracak.
 
-zone “srv.world” tanımı burada bize srv.world adında alan adı oluşturcağımızı gösterir. type master; ile birincil isim sunucu olduğunu belirtiyor. file “srv.world.lan”; ise alan adımız için oluşturacağımız forward ve reverse zone dosyalarımız default olarak named.conf dosyası içerisinde /var/named dosyası olarak ayarlıdır. Birazdan da göreceğiniz gibi zone dosyalarını /var/named dosyası içinde yapılandırcaz. file dosyasının ismini dilediğiniz gibi yapabilirsiniz buradaki örnekte “srv.world.len” olarak tanımlandığı için bu sadece bir örnek.
+zone “example.com” tanımı burada bize <b>example.com</b> adında alan adı oluşturcağımızı gösterir. type master; ile birincil isim sunucu olduğunu belirtiyor. file “example.com.lan”; ise alan adımız için oluşturacağımız forward ve reverse zone dosyalarımız default olarak named.conf dosyası içerisinde /var/named dosyası olarak ayarlıdır. Birazdan da göreceğiniz gibi zone dosyalarını /var/named dosyası içinde yapılandırcaz. file dosyasının ismini dilediğiniz gibi yapabilirsiniz buradaki örnekte “example.com.len” olarak tanımlandığı için bu sadece bir örnek.
 
-srv.world adlı alan adımızı 10.0.0.30 ip adresinde açacağımızı düşünelim. zone “0.0.10.in-addr.arpa” tanımını sonundaki 8 byte'ı silersek 10.0.0 olarak kalıyor. Ve bu reverse zone tanımı olacağı için aklınızda tersten yazacağız diye aklınızda kalabilir 0.0.10. file dosyasının ismini dilediğiniz gibi yapabilirsiniz buradaki örnekte “0.0.10.db” olarak tanımlandığı için bu sadece bir örnek. İsterseniz “reverse.srv.world” diye de tanımlayabilirdik.
+example.com adlı alan adımızı 192.168.2.220 IP Adresinde açacağımızı düşünelim. zone “2.168.192.in-addr.arpa” tanımını sonundaki 8 byte'ı silersek 192.168.2 olarak kalıyor. Ve bu reverse zone tanımı olacağı için aklınızda tersten yazacağız diye aklınızda kalabilir 2.168.192 file dosyasının ismini dilediğiniz gibi yapabilirsiniz buradaki örnekte “2.168.192.db” olarak tanımlandığı için bu sadece bir örnek. İsterseniz “reverse.example.com” diye de tanımlayabilirdik.
 
 BURAYA <i>forwardzone1.png</i> ekle.\
 BURAYA <i>forwardzone2.png</i> ekle.\
 BURAYA <i>reversezone1.png</i> ekle.\
 BURAYA <i>reversezone2.png</i> ekle.
 
-IN --> İnternet tanımı olduğunu gösterir.\
+<b>IN --> İnternet tanımı olduğunu gösterir.\
 TTL --> Time-to-Live (Yaşam Süresi).\
 MX --> Mail Exchanger temsil eder.\
 SOA --> Start of Authority, alan adı ile ilgili genel tanımları temsil eder.\
 NS --> Name Server, alan adını tanımlar.\
 A --> Alan adının hangi IP Adresine karşılık geldiğini temsil eder.
-PTR --> Pointer, IP Adresinin hangi domaini temsil ettiğini temsil eder.
+PTR --> Pointer, IP Adresinin hangi domaini temsil ettiğini temsil eder.</b>
 
 Terminalden bind aktif etmemiz lazım.
 
-$ systemctl enable --now named\
+$ <b>systemctl enable --now named\
 BURAYA <i>enablebind1.png</i> ekle.\
 $ firewall-cmd --add-service=dns --permanent\
 BURAYA <i>enablebind2.png</i> ekle.\
@@ -72,7 +72,7 @@ $ firewall-cmd --reload\
 BURAYA <i>enablebind3.png</i> ekle.\
 $ nmcli connection modify enp0s3 ipv4.dns 192.168.2.220\
 BURAYA <i>enablebind4.png</i> ekle.\
-$ nmcli connection down enp0s3; nmcli connection up enp0s3\
+$ nmcli connection down enp0s3; nmcli connection up enp0s3</b>\
 BURAYA <i>interfacereset.png</i> ekle.
 
 
