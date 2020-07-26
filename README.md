@@ -81,6 +81,8 @@ BURAYA <i>interfacereset.png</i> ekle.
 BURAYA <i>dig1.png</i> ekle.\
 BURAYA <i>dig2.png</i> ekle.
 
+<b>dig</b> komutu sayesinde bize domaine bağlı olan A kaydını göstermektedir.
+
 ### 3. DHCP Server Kurulumu ve Yapılandırması:
 ---
 $ <b>dnf -y install dhcp-server </b> --> DHCP Server kurulumunu yapıyoruz.\
