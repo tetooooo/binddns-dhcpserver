@@ -29,11 +29,19 @@
   BURAYA <i>nmtui2.png</i> ekle.\
   Gelen pencerede <i>Edit</i> seçeneğini seçelim.
   BURAYA <i>nmtui3.png</i> ekle.\
-  Ardından OK ile burdan çıkış yapalım
+  Ardından OK ile burdan çıkış yapalım\
   $ sudo nmcli connection down enp1s0 && sudo nmcli connection up enp1s0 --> Komutu ile modem interface yeniden başlat yapıyoruz.\
-  $ ip a komutu ile değişiklikler kaydedilmiş mi diye kontrol ediyoruz.
+  $ ip a komutu ile değişiklikler kaydedilmiş mi diye kontrol ediyoruz.\
   
 </details>
+
+## 2. Centos 8 Static IP Ataması:
+$ dnf -y install bind bind-utils  
+<b>BIND</b> default olarak <b>/etc/named.conf</b> dosyasını kullanıyor.
+$ vim /etc/named.conf
+BURAYA <i>nameconf1.png</i> ekle.\
+BURAYA <i>nameconf2.png</i> ekle.\
+
 
 
 
