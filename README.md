@@ -16,22 +16,22 @@
   BURAYA <i>interfaceayarlari.png</i> ekle.\
   İlk kurulumda <b><i>BOOTPROTO</b></i> default olarak dhcp geliyor. Biz onu none ile değiştiriyoruz. Ayrıca <b><i>IPADDR, PREFIX, GATEWAY, DNS1</b></i> değişkenlerimizi manual olarak eklememiz lazım.\
   $ <b>nmcli connection down enp0s3; nmcli connection up enp0s3</b> --> Bu komut yardımı ile interface yeniden başlat yapıyoruz.\
-  $ <b>ip</b> a komutu ile tekrardan istediğimiz IP Adresine ayarladı mı diye kontrol ediyoruz.
+  $ <b>ip a</b> komutu ile tekrardan istediğimiz IP Adresine ayarladı mı diye kontrol ediyoruz.
   
 </details>
 
 <details>
   
-  <b><summary> nmtui Komutu Yardımıyla Yapılandırma: </summary>
-  - nmtui --> komutunu çalıştırıyoruz.\
+  <b><summary> nmtui Komutu Yardımıyla Yapılandırma: </summary></b>
+  $ <b>nmtui</b>\
   BURAYA <i>nmtui1.png</i> ekle.\
-  Edit a connection giriş yapalım.\
+  <b><i>Edit a connection</b></i> giriş yapalım.\
   BURAYA <i>nmtui2.png</i> ekle.\
-  Gelen pencerede <i>Edit</i> seçeneğini seçelim.\
+  Gelen pencerede <b><i>Edit</b></i> seçeneğini seçelim.\
   BURAYA <i>nmtui3.png</i> ekle.\
   Ardından OK ile burdan çıkış yapalım.\
-  $ sudo nmcli connection down enp1s0 && sudo nmcli connection up enp1s0 --> Komutu ile modem interface yeniden başlat yapıyoruz.\
-  $ ip a komutu ile değişiklikler kaydedilmiş mi diye kontrol ediyoruz.
+  $ <b><i>sudo nmcli connection down enp1s0 && sudo nmcli connection up enp1s0</b></i> --> Komutu ile modem interface yeniden başlat yapıyoruz.\
+  $ <b>ip a</b> komutu ile değişiklikler kaydedilmiş mi diye kontrol ediyoruz.
   
 </details>
 
