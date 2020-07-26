@@ -96,3 +96,5 @@ $ <b>systemctl enable --now dhcpd</b> --> Sistemimize dhcp sunucumuzu aktif ediy
 Arka planda Firewall çalışıyor ise:\
 <b>$ firewall-cmd --add-service=dhcp --permanent</br> 
 $ firewall-cmd --reload</b>
+
+<b><i>NOT: </b></i>Modem arayüzünden DHCP kapalı tutmanız lazım.
