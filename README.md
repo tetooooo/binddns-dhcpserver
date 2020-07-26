@@ -4,6 +4,7 @@
 
 
 ### 1. Centos 8 Static IP Ataması:
+---
 
 <details>
   
@@ -35,6 +36,7 @@
 </details>
 
 ### 2. BIND DNS Kurulumu ve Yapılandırması:
+---
 $ dnf -y install bind bind-utils --> Bind paketlerimizi sisteme yüklüyoruz.\
 <b>BIND</b> default olarak <b>/etc/named.conf</b> dosyasını kullanıyor.\
 $ vim /etc/named.conf --> Bind dosyasını düzenlicez.\
