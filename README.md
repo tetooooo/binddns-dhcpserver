@@ -41,8 +41,11 @@ $ vim /etc/named.conf --> Bind dosyasını düzenlicez.\
 BURAYA <i>nameconf1.png</i> ekle.\
 BURAYA <i>nameconf2.png</i> ekle.
 
-Zone dosyalarının default olarak okunbilmesi için <i>/var/named</i> dosyası içinde yer alması lazım.\
-Zone dosyalarımı oluşturup düzenleme kısmına geçelim.
+zone “.” tanımını değiştirmememiz gerekiyor. Eğer NS tanımlı serverımız eğer olur da çalışmaz ise zone “.” tanımlı alan adına başvuracak.\
+
+zone “srv.world” tanımı burada bize srv.world adında alan adı oluşturcağımızı gösterir. type master; ile birincil isim sunucu olduğunu belirtiyor. file “srv.world.lan”; ise alan adımız için oluşturacağımız forward ve reverse zone dosyalarımız default olarak named.conf dosyası içerisinde /var/named dosyası olarak ayarlıdır. Birazdan da göreceğiniz gibi zone dosyalarını /var/named dosyası içinde yapılandırcaz. file dosyasının ismini dilediğiniz gibi yapabilirsiniz buradaki örnekte “srv.world.len” olarak tanımlandığı için bu sadece bir örnek.\
+
+srv.world adlı alan adımızı 10.0.0.30 ip adresinde açacağımızı düşünelim. zone “0.0.10.in-addr.arpa” tanımını sonundaki 8 byte'ı silersek 10.0.0 olarak kalıyor. Ve bu reverse zone tanımı olacağı için aklınızda tersten yazacağız diye aklınızda kalabilir 0.0.10. file dosyasının ismini dilediğiniz gibi yapabilirsiniz buradaki örnekte “0.0.10.db” olarak tanımlandığı için bu sadece bir örnek. İsterseniz “reverse.srv.world” diye de tanımlayabilirdik.\
 
 BURAYA <i>forwardzone1.png</i> ekle.\
 BURAYA <i>forwardzone2.png</i> ekle.\
