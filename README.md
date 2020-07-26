@@ -55,6 +55,25 @@ MX --> Mail Exchanger temsil eder.\
 SOA --> Start of Authority, alan adı ile ilgili genel tanımları temsil eder.\
 NS --> Name Server, alan adını tanımlar.\
 A --> Alan adının hangi IP Adresine karşılık geldiğini temsil eder.
+PTR --> Pointer, IP Adresinin hangi domaini temsil ettiğini temsil eder.
+
+Terminalden bind aktif etmemiz lazım.
+
+$ systemctl enable --now named\
+BURAYA <i>enablebind1.png</i> ekle.\
+$ firewall-cmd --add-service=dns --permanent\
+BURAYA <i>enablebind2.png</i> ekle.\
+$ firewall-cmd --reload\
+BURAYA <i>enablebind3.png</i> ekle.\
+$ nmcli connection modify enp0s3 ipv4.dns 192.168.2.220\
+BURAYA <i>enablebind4.png</i> ekle.\
+$ nmcli connection down enp0s3; nmcli connection up enp0s3\
+BURAYA <i>interfacereset.png</i> ekle.\
+
+
+
+
+
 
 
 
