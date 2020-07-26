@@ -10,7 +10,7 @@
   
   <b><summary> İnterface Dosyamızı Manual Değiştirme: </summary>
   
-  ip a komutunu kullanarak <i>Network Interface'lerimizi</i> görüntülüyoruz. \
+  ip a komutunu kullanarak <i>Network Interface'lerimizi</i> görüntülüyoruz.
   
   
   
