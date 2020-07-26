@@ -8,7 +8,7 @@
 
 <details>
   
-  <b><summary> Interface Dosyamızı Manual Yapılandırma: </summary>
+  <b><summary> Interface Dosyamızı Manual Yapılandırma: </summary></b>
   
   $ ip a komutunu kullanarak <i>Network Interface'lerimizi</i> görüntülüyoruz.\
   BURAYA <i>ipacommend.png</i> ekle.\
