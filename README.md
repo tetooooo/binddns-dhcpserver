@@ -89,7 +89,7 @@ $ <b>vim /etc/dhcp/dhcpd.conf</b> --> DHCP Server dosyamızın düzenlemesini ya
 BURAYA <i>dhcp1.png</i>\
 BURAYA <i>dhcp2.png</i>
 
-$ <b>systemctl enable --now dhcpd</b> --> Sistemimize dhcp sunucumuzu aktif ediyoruz.\
+$ <b>systemctl enable --now dhcpd</b> --> Sistemimize dhcp sunucumuzu aktif ediyoruz.
 
 Arka planda Firewall çalışıyor ise:\
 <b>$ firewall-cmd --add-service=dhcp --permanent</br> 
